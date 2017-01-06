@@ -4255,7 +4255,7 @@ var example1 = function (_, Kotlin) {
   }
   function ExamplesWeb(config) {
     this.config = config;
-    this.currentExample = 0;
+    this.currentExample = 59;
     this.topBar = new ExamplesWeb$TopBar(Kotlin.getBoundCallableRefForMemberFunction(this, 'runCurrentGame_0'), Kotlin.getBoundCallableRefForMemberFunction(this, 'prevExample'), Kotlin.getBoundCallableRefForMemberFunction(this, 'nextExample'));
     this.topBarGame = this.startTopBar_0();
   }
@@ -6966,7 +6966,7 @@ var example1 = function (_, Kotlin) {
     this.game.physics.startSystem(Phaser.Physics.ARCADE);
     this.game.stage.backgroundColor = '#2d2d2d';
     this.sprite = this.game.add.sprite(1960, 200, 'phaser');
-    this.game.physics.arcade.sortDirection = Phaser.Physics.Phaser.Physics.Arcade.RIGHT_LEFT;
+    this.game.physics.arcade.sortDirection = Phaser.Physics.Arcade.RIGHT_LEFT;
     enable(this.game.physics.arcade, this.sprite);
     this.group = this.game.add.physicsGroup(Phaser.Physics.ARCADE);
     tmp$ = 500 - 1;
@@ -7024,7 +7024,7 @@ var example1 = function (_, Kotlin) {
     this.game.physics.startSystem(Phaser.Physics.ARCADE);
     this.game.stage.backgroundColor = '#2d2d2d';
     this.sprite = this.game.add.sprite(400, 2900, 'phaser');
-    this.game.physics.arcade.sortDirection = Phaser.Physics.Phaser.Physics.Arcade.BOTTOM_TOP;
+    this.game.physics.arcade.sortDirection = Phaser.Physics.Arcade.BOTTOM_TOP;
     enable(this.game.physics.arcade, this.sprite);
     this.group = this.game.add.physicsGroup(Phaser.Physics.ARCADE);
     tmp$ = 500 - 1;
