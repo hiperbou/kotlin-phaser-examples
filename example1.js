@@ -4257,7 +4257,7 @@ var example1 = function (_, Kotlin) {
     this.config = config;
     this.currentExample = 0;
     this.topBar = new ExamplesWeb$TopBar(Kotlin.getBoundCallableRefForMemberFunction(this, 'runCurrentGame_0'), Kotlin.getBoundCallableRefForMemberFunction(this, 'prevExample'), Kotlin.getBoundCallableRefForMemberFunction(this, 'nextExample'));
-    this.startTopBar_0();
+    this.topBarGame = this.startTopBar_0();
   }
   function ExamplesWeb$exampleDivProperties() {
     ExamplesWeb$exampleDivProperties_instance = this;
@@ -4284,6 +4284,14 @@ var example1 = function (_, Kotlin) {
     var example = this.getExampleInfo_za3lpa$(this.currentExample);
     this.topBar.title.text = example.name;
     this.game = this.runExample_0(example);
+    this.setupScale_0(this.topBarGame);
+    this.setupScale_0(this.game);
+  };
+  ExamplesWeb.prototype.setupScale_0 = function (game) {
+    game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
+    game.scale.pageAlignHorizontally = true;
+    game.scale.pageAlignVertically = true;
+    game.scale.refresh();
   };
   ExamplesWeb.prototype.changeExample_0 = function (exampleNum) {
     this.currentExample = Phaser.Math.clamp(exampleNum, this.config.minExample, this.config.maxExample) | 0;
