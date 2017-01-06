@@ -4255,7 +4255,7 @@ var example1 = function (_, Kotlin) {
   }
   function ExamplesWeb(config) {
     this.config = config;
-    this.currentExample = 59;
+    this.currentExample = 0;
     this.topBar = new ExamplesWeb$TopBar(Kotlin.getBoundCallableRefForMemberFunction(this, 'runCurrentGame_0'), Kotlin.getBoundCallableRefForMemberFunction(this, 'prevExample'), Kotlin.getBoundCallableRefForMemberFunction(this, 'nextExample'));
     this.topBarGame = this.startTopBar_0();
   }
@@ -7330,7 +7330,7 @@ var example1 = function (_, Kotlin) {
   };
   function AudioSpriteJson() {
     Phaser.State.call(this);
-    this.audioJSON = '{\n\t    spritemap: {\n\t        "alien death": {\n\t            start: 1,\n\t            end: 2,\n\t            loop: false\n\t        },\n\t        "boss hit": {\n\t            start: 3,\n\t            end: 3.5,\n\t            loop: false\n\t        },\n\t        "escape": {\n\t            start: 4,\n\t            end: 7.2,\n\t            loop: false\n\t        },\n\t        "meow": {\n\t            start: 8,\n\t            end: 8.5,\n\t            loop: false\n\t        },\n\t        "numkey": {\n\t            start: 9,\n\t            end: 9.1,\n\t            loop: false\n\t        },\n\t        "ping": {\n\t            start: 10,\n\t            end: 11,\n\t            loop: false\n\t        },\n\t        "death": {\n\t            start: 12,\n\t            end: 16.2,\n\t            loop: false\n\t        },\n\t        "shot": {\n\t            start: 17,\n\t            end: 18,\n\t            loop: false\n\t        },\n\t        "squit": {\n\t            start: 19,\n\t            end: 19.3,\n\t            loop: false\n\t        }\n\t    }\n\t}';
+    this.audioJSON = '{\n\t    "spritemap": {\n\t        "alien death": {\n\t            "start": 1,\n\t            "end": 2,\n\t            "loop": false\n\t        },\n\t        "boss hit": {\n\t            "start": 3,\n\t            "end": 3.5,\n\t            "loop": false\n\t        },\n\t        "escape": {\n\t            "start": 4,\n\t            "end": 7.2,\n\t            "loop": false\n\t        },\n\t        "meow": {\n\t            "start": 8,\n\t            "end": 8.5,\n\t            "loop": false\n\t        },\n\t        "numkey": {\n\t            "start": 9,\n\t            "end": 9.1,\n\t            "loop": false\n\t        },\n\t        "ping": {\n\t            "start": 10,\n\t            "end": 11,\n\t            "loop": false\n\t        },\n\t        "death": {\n\t            "start": 12,\n\t            "end": 16.2,\n\t            "loop": false\n\t        },\n\t        "shot": {\n\t            "start": 17,\n\t            "end": 18,\n\t            "loop": false\n\t        },\n\t        "squit": {\n\t            "start": 19,\n\t            "end": 19.3,\n\t            "loop": false\n\t        }\n\t    }\n\t}';
   }
   AudioSpriteJson.prototype.preload = function () {
     this.game.load.image('title', 'assets/pics/catastrophi.png');
@@ -12937,6 +12937,8 @@ var example1 = function (_, Kotlin) {
   };
   MatchingPairs.prototype.processClick = function () {
     var tmp$;
+    if (this.marker.x < 0 || this.marker.y < 0)
+      return;
     this.currentTile = (tmp$ = this.map.getTile(this.layer.getTileX(this.marker.x), this.layer.getTileY(this.marker.y))) != null ? tmp$ : Kotlin.throwNPE();
     this.currentTilePosition = ((this.layer.getTileY(this.game.input.activePointer.worldY) | 0) + 1) * 6 - (6 - ((this.layer.getTileX(this.game.input.activePointer.worldX) | 0) + 1));
     if (this.game.input.mousePointer.isDown) {
