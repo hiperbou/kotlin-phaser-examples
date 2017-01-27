@@ -3,7 +3,7 @@ Kotlin Phaser Examples
 
 Phaser examples compiled with the Kotlin HTML5 game engine Koala
 
-https://github.com/hiperbou/Koala
+https://github.com/hiperbou/kotlin-phaser
 
 
 License
